@@ -24,7 +24,8 @@ Fork this repository, open the terminal in the folder containing the project fil
 <a name="Usage-Information"></a>   
 ## Usage Information
 Open the terminal in the folder containing the project files, run the command "node index.js", and answer the questions 
-A video for using the project can be found [here]().
+A video for using the project can be found [here](https://youtu.be/JkHj-jJOFcs).
+The generated HTML file can be found in the dist folder or you can click [here](https://github.com/ElliottLi97/Team-Profile-Generator/blob/main/dist/index.html). 
 
 <a name="Test"></a>
 ## Tests
