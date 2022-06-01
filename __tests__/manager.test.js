@@ -1,15 +1,19 @@
-const { number } = require('yargs');
 const Manager = require('../lib/Manager')
 
-test('creating manager object',() => {
-    const manager = new Manager ("Elliott", 21, 'elliottli.job@gmail.com', 66);
+const SAMPLENAME = "Elliott"
+const SAMPLEEMAIL = 'elliottli.job@gmail.com'
+const SAMPLEID = 21
+const SAMPLEOFFICENUMBER = 'UCB'
 
-    expect(manager.officeNumber).toEqual(expect.any(Number))
+test('Manger object is created successfully',() => {
+    const manager = new Manager (SAMPLENAME, SAMPLEID, SAMPLEEMAIL, SAMPLEOFFICENUMBER);
+
+    expect(manager.officeNumber).toEqual(SAMPLEOFFICENUMBER)
 })
 
 
 test('manager.getRole returns any string',() => {
-    const manager = new Manager ("Elliott", 21, 'elliottli.job@gmail.com', 66);
+    const manager = new Manager (SAMPLENAME, SAMPLEID, SAMPLEEMAIL, SAMPLEOFFICENUMBER);
 
     expect(manager.getRole()).toEqual("Manager")
 })

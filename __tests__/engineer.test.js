@@ -1,19 +1,24 @@
 const Engineer = require('../lib/Engineer')
 
-test('creating Engineer object',() => {
-    const engineer = new Engineer ("Elliott", 21, 'elliottli.job@gmail.com', 'elliottli97');
+const SAMPLENAME = "Elliott"
+const SAMPLEEMAIL = 'elliottli.job@gmail.com'
+const SAMPLEID = 21
+const SAMPLEGITHUB = 'elliottli97'
 
-    expect(engineer.github).toEqual(expect.any(String))
+test("Engineer object is created successfully",() => {
+    const engineer = new Engineer (SAMPLENAME, SAMPLEID, SAMPLEEMAIL, SAMPLEGITHUB);
+
+    expect(engineer.github).toEqual(SAMPLEGITHUB)
 })
 
 test('engineer.getGithub returns any string',() => {
-    const engineer = new Engineer ("Elliott", 21, 'elliottli.job@gmail.com', 'elliottli97');
+    const engineer = new Engineer (SAMPLENAME, SAMPLEID, SAMPLEEMAIL, SAMPLEGITHUB);
 
-    expect(engineer.getGithub()).toEqual(expect.any(String))
+    expect(engineer.getGithub()).toEqual(SAMPLEGITHUB)
 })
 
 test('engineer.getRole returns any string',() => {
-    const engineer = new Engineer ("Elliott", 21, 'elliottli.job@gmail.com', 'elliottli97');
+    const engineer = new Engineer (SAMPLENAME, SAMPLEID, SAMPLEEMAIL, SAMPLEGITHUB);
 
     expect(engineer.getRole()).toEqual("Engineer")
 })

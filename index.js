@@ -13,15 +13,11 @@ const htmlGen = require('./src/htmlGen')
 const employeearray = []
 
 const createtmanager = () => {
-    // const validateId = 
-    // const validateEmail = 
-    // const validateName = 
     return inquirer.prompt([
         {
             type: "input",
             name: "name",
             message: "Please enter the manager's name",
-            //emaivaldiate: validateEmail
         },
         {
             type: "input",
@@ -46,7 +42,7 @@ const createtmanager = () => {
         const manager = new Manager (name, id, email, officeNumber)
         //console.log(manager)
         employeearray.push(manager)
-        console.log(employeearray)
+        //console.log(employeearray)
         return employeearray
     })
 }
@@ -96,10 +92,10 @@ const createEmployee = () => {
     ])
     .then(employeeDetails => {
         const {name, id, email, role, github, school, confirm} = employeeDetails
-        console.log(confirm)
+        //console.log(confirm)
         if (role === "Engineer"){
             const engineer = new Engineer (name, id, email, github)
-            console.log(engineer.getGithub())
+            //console.log(engineer.getGithub())
             employeearray.push(engineer)
         }else{
             const intern = new Intern (name, id, email, school)
@@ -108,7 +104,7 @@ const createEmployee = () => {
         if (confirm){
             return createEmployee()
         }else{
-            console.log(employeearray)
+            //console.log(employeearray)
             return employeearray
         }
     })
@@ -118,8 +114,8 @@ const createEmployee = () => {
 const writefile = data => {
     fs.writeFile('./dist/index.html', data, err => {
         if (err){
-            console.err("There was an error writing your file")
-            console.err(err)
+            console.log("There was an error writing your file")
+            console.log(err)
             return
         }else{
             console.log('Your team page has been successfully created. You will find your file in the dist folder named "index.html"')

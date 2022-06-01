@@ -11,7 +11,7 @@ const createManager = function (manager) {
                 ID: ${manager.id}
             </div>
             <div class = "details">
-                Email: <a href="${manager.email}">${manager.email}</a>
+                Email: <a href="mailto:${manager.email}">${manager.email}</a>
             </div>
             <div class = "details">
                 Office Number: ${manager.officeNumber}
@@ -35,7 +35,7 @@ const createIntern = function (intern) {
                 ID: ${intern.id}
             </div>
             <div class = "details">
-                Email: <a href="${intern.email}">${intern.email}</a>
+                Email: <a href="mailto:${intern.email}">${intern.email}</a>
             </div>
             <div class = "details">
                 School: ${intern.school}
@@ -59,10 +59,10 @@ const createEngineer = function (engineer) {
                 ID: ${engineer.id}
             </div>
             <div class = "details">
-                Email: <a href="${engineer.email}">${engineer.email}</a>
+                Email: <a href="mailto:${engineer.email}">${engineer.email}</a>
             </div>
             <div class = "details">
-                Github: <a href="github.com/${engineer.github}">${engineer.github}</a>
+                Github: <a href="https://www.github.com/${engineer.github}">${engineer.github}</a>
             </div>
         </body>
     </div>
