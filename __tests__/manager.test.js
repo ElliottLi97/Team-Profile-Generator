@@ -12,7 +12,7 @@ test('Manger object is created successfully',() => {
 })
 
 
-test('manager.getRole returns any string',() => {
+test('manager.getRole returns "Manager"',() => {
     const manager = new Manager (SAMPLENAME, SAMPLEID, SAMPLEEMAIL, SAMPLEOFFICENUMBER);
 
     expect(manager.getRole()).toEqual("Manager")

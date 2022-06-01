@@ -17,7 +17,7 @@ test('intern.getGithub returns the correct school',() => {
     expect(intern.getSchool()).toEqual(SAMPLESCHOOL)
 })
 
-test('intern.getRole returns Intern',() => {
+test('intern.getRole returns "Intern"',() => {
     const intern = new Intern (SAMPLENAME, SAMPLEID, SAMPLEEMAIL, SAMPLESCHOOL);
 
     expect(intern.getRole()).toEqual("Intern")

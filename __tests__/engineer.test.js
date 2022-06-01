@@ -11,13 +11,13 @@ test("Engineer object is created successfully",() => {
     expect(engineer.github).toEqual(SAMPLEGITHUB)
 })
 
-test('engineer.getGithub returns any string',() => {
+test('engineer.getGithub return correct github',() => {
     const engineer = new Engineer (SAMPLENAME, SAMPLEID, SAMPLEEMAIL, SAMPLEGITHUB);
 
     expect(engineer.getGithub()).toEqual(SAMPLEGITHUB)
 })
 
-test('engineer.getRole returns any string',() => {
+test('engineer.getRole returns  "Engineer"',() => {
     const engineer = new Engineer (SAMPLENAME, SAMPLEID, SAMPLEEMAIL, SAMPLEGITHUB);
 
     expect(engineer.getRole()).toEqual("Engineer")
